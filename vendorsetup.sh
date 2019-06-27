@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_montana-userdebug
+add_lunch_combo carbon_montana-user
+add_lunch_combo carbon_montana-userdebug

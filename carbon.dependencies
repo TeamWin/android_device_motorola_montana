@@ -1,0 +1,8 @@
+[
+  {
+    "repository": "PixelExperience/packages_resources_MotoActions",
+    "target_path": "packages/resources/MotoActions",
+    "revision": "pie",
+    "remote": "gh"
+  }
+]
