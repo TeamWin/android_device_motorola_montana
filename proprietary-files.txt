@@ -40,7 +40,6 @@ framework/com.qualcomm.qti.imscmservice@1.0-java.jar
 -framework/qcrilhook.jar
 -framework/QPerformance.jar
 -framework/QtiTelephonyServicelibrary.jar
-framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 -framework/rcsimssettings.jar
 -framework/tcmclient.jar
 -framework/UxPerformance.jar
