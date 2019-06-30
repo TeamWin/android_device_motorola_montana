@@ -62,8 +62,15 @@ BOARD_KERNEL_CMDLINE        := \
 BOARD_KERNEL_BASE           := 0x80000000
 BOARD_RAMDISK_OFFSET        := 0x01000000
 BOARD_KERNEL_PAGESIZE       := 2048
-TARGET_PREBUILT_KERNEL      := $(DEVICE_PATH)/prebuilt/kernel
+KERNEL_TOOLCHAIN            := $(PWD)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX     := aarch64-linux-android-
+TARGET_KERNEL_SOURCE        := kernel/motorola/msm8937
+TARGET_KERNEL_CONFIG        := montana_defconfig
+BOARD_KERNEL_SEPARATED_DT   := true
+TARGET_CUSTOM_DTBTOOL       := dtbTool_custom
 BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_KERNEL_LZ4C_DT        := true
+BOARD_DTBTOOL_ARGS          := --force-v3 --motorola 1
 BOARD_KERNEL_IMAGE_NAME     := Image.gz
 
 # Root filesystem
@@ -106,7 +113,7 @@ TARGET_PROVIDES_KEYMASTER := true
 # Encryption support
 TARGET_HW_DISK_ENCRYPTION   := true
 TW_INCLUDE_CRYPTO           := true
-TARGET_CRYPTFS_HW_PATH      := $(DEVICE_PATH)/cryptfs_hw
+TARGET_CRYPTFS_HW_PATH      := vendor/qcom/opensource/cryptfs_hw
 
 # Brightness
 TW_BRIGHTNESS_PATH                  := /sys/class/leds/lcd-backlight/brightness
