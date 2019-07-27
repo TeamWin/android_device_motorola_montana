@@ -24,12 +24,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 TW_DEVICE_VERSION := 3
 
 # Screen density
-PRODUCT_AAPT_CONFIG         := normal
-PRODUCT_AAPT_PREF_CONFIG    := xhdpi
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
-TARGET_SCREEN_HEIGHT    := 1920
-TARGET_SCREEN_WIDTH     := 1080
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 # Encryption
 PRODUCT_PACKAGES += \
@@ -40,18 +40,17 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-# Time Zone data for recovery
+# Time Zone data
 PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
-# sdcardfs
+# SD Card FS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE          := montana
-PRODUCT_NAME            := omni_montana
-PRODUCT_MODEL           := Moto G5S
-PRODUCT_BRAND           := Motorola
-PRODUCT_MANUFACTURER    := Motorola
-BOARD_VENDOR            := motorola
+PRODUCT_DEVICE := montana
+PRODUCT_NAME := omni_montana
+PRODUCT_MODEL := Moto G5S
+PRODUCT_BRAND := Motorola
+PRODUCT_MANUFACTURER := Motorola
