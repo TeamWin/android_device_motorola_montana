@@ -40,10 +40,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-# Time Zone data
-PRODUCT_COPY_FILES += \
-    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
-
 # SD Card FS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true

@@ -29,9 +29,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
@@ -95,7 +92,6 @@ TARGET_PROVIDES_KEYMASTER := true
 # Encryption support
 TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_CRYPTO := true
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 
 # Brightness
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -117,5 +113,4 @@ TW_EXTRA_LANGUAGES := true
 
 # Misc TWRP
 BOARD_SUPPRESS_SECURE_ERASE := true # don't take forever to wipe
-BOARD_HAS_NO_SELECT_BUTTON := true
 TW_INCLUDE_FB2PNG := true
