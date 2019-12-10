@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter montana,$(TARGET_DEVICE)),)
+ifneq ($(filter montana,montana_SAR,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
