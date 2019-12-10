@@ -1,1 +1,2 @@
 add_lunch_combo omni_montana-eng
+add_lunch_combo omni_montana_SAR-eng
