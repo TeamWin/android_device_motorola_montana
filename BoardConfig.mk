@@ -14,7 +14,11 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/montana
+ifeq ($(TARGET_PRODUCT),omni_montana_SAR)
+   DEVICE_PATH := device/motorola/montana/montana_SAR
+else
+   DEVICE_PATH := device/motorola/montana
+endif
 
 -include device/motorola/msm8937-common/BoardConfigCommon.mk
 
