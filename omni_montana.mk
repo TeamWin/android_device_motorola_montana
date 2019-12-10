@@ -21,8 +21,18 @@ $(call inherit-product-if-exists, device/motorola/msm8937-common/msm8937.mk)
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_DEVICE := montana
-PRODUCT_NAME := omni_montana
+ifeq ($(TARGET_PRODUCT),omni_montana_SAR)
+   PRODUCT_DEVICE := montana_SAR
+   PRODUCT_NAME := montana_hima_SAR
+else
+   PRODUCT_DEVICE := montana
+   PRODUCT_NAME := omni_montana
+endif
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := Moto G5S
 PRODUCT_MANUFACTURER := Motorola
+
+ifeq ($(TARGET_PRODUCT),omni_montana_SAR)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.system_root_image=true
+endif
