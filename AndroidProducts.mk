@@ -15,4 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_montana.mk
+    $(LOCAL_DIR)/omni_montana.mk \
+    $(LOCAL_DIR)/montana_SAR/omni_montana_SAR.mk
