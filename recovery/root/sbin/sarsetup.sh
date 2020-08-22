@@ -4,7 +4,7 @@ build_prop_path="/s/system/build.prop"
 if [ -f "${build_prop_path}" ]; then
     system_version=$(grep -i 'ro.build.version.release' "${build_prop_path}"  | cut -f2 -d'=')
     if [ "${system_version}" == "9" ]; then
-        mount none /etc/twrp_sar.fstab /etc/twrp.fstab bind
+        mount -o bind /etc/twrp_sar.fstab /etc/twrp.fstab
         setprop ro.build.system_root_image true
     fi
 fi
