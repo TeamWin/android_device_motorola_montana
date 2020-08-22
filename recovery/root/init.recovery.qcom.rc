@@ -11,3 +11,6 @@ on property:ro.crypto.state=encrypted
 
 on property:ro.build.system_root_image=true
     export ANDROID_ROOT=/system_root
+
+on property:ro.twrp.sar=false
+    setprop ro.build.system_root_image false
