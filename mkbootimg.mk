@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ## Build and run dtbtool
-DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolCM$(HOST_EXECUTABLE_SUFFIX)
+DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbTool_custom$(HOST_EXECUTABLE_SUFFIX)
 LZ4_DT_IMAGE := $(PRODUCT_OUT)/dt.img
 
 ifndef TARGET_PREBUILT_DTB
