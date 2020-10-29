@@ -8,6 +8,3 @@ service sbinqseecomd /sbin/qseecomd
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
-
-on property:ro.twrp.sar=false
-    setprop ro.build.system_root_image false
