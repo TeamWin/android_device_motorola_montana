@@ -62,8 +62,8 @@ ifneq ($(WITH_KERNEL_SOURCE),true)
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dt.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 else
-TARGET_KERNEL_CONFIG := montana_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/montana
+TARGET_KERNEL_CONFIG := montana_recovery_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 TARGET_CUSTOM_DTBTOOL := dtbTool_custom
 BOARD_DTBTOOL_ARGS := --force-v3 --motorola 1
 endif
